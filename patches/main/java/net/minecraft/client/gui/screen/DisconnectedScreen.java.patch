@@ -1,0 +1,28 @@
+--- a/main/java/net/minecraft/client/gui/screen/DisconnectedScreen.java
++++ b/main/java/net/minecraft/client/gui/screen/DisconnectedScreen.java
+@@ -4,9 +4,7 @@
+ import net.minecraft.client.gui.IBidiRenderer;
+ import net.minecraft.client.gui.widget.button.Button;
+ import net.minecraft.util.text.ITextComponent;
+-import net.minecraft.util.text.StringTextComponent;
+ import net.minecraft.util.text.TranslationTextComponent;
+-import si.f5.pa_union.reconnect.Reconnect;
+ 
+ public class DisconnectedScreen extends Screen
+ {
+@@ -31,14 +29,10 @@
+     {
+         this.field_243289_b = IBidiRenderer.func_243258_a(this.font, this.message, this.width - 50);
+         this.textHeight = this.field_243289_b.func_241862_a() * 9;
+-        this.addButton(new Button(this.width / 2 - 100, Math.min(this.height / 2 + this.textHeight / 2 + 9, this.height - 30) + 25, 200, 20, new TranslationTextComponent("gui.toMenu"), (p_213033_1_) ->
++        this.addButton(new Button(this.width / 2 - 100, Math.min(this.height / 2 + this.textHeight / 2 + 9, this.height - 30), 200, 20, new TranslationTextComponent("gui.toMenu"), (p_213033_1_) ->
+         {
+             this.minecraft.displayGuiScreen(this.nextScreen);
+         }));
+-        this.addButton(new Button(this.width / 2 - 100, Math.min(this.height / 2 + this.textHeight / 2 + 9, this.height - 30), 200, 20, new StringTextComponent("再接続"), (p_213033_1_) ->
+-        {
+-            Reconnect.reconnect();
+-        }));
+     }
+ 
+     public void render(MatrixStack matrixStack, int mouseX, int mouseY, float partialTicks)

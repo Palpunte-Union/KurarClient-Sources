@@ -1,0 +1,20 @@
+--- a/main/java/net/minecraft/client/gui/screen/ConnectingScreen.java
++++ b/main/java/net/minecraft/client/gui/screen/ConnectingScreen.java
+@@ -21,7 +21,6 @@
+ import net.minecraft.util.text.TranslationTextComponent;
+ import org.apache.logging.log4j.LogManager;
+ import org.apache.logging.log4j.Logger;
+-import si.f5.pa_union.reconnect.Reconnect;
+ 
+ public class ConnectingScreen extends Screen
+ {
+@@ -42,9 +41,6 @@
+         mcIn.unloadWorld();
+         mcIn.setServerData(serverDataIn);
+         this.connect(serveraddress.getIP(), serveraddress.getPort());
+-        Reconnect.serverIP = serverDataIn.serverIP;
+-        Reconnect.lastScreen = parent;
+-        Reconnect.isLan = serverDataIn.isOnLAN();
+     }
+ 
+     public ConnectingScreen(Screen parent, Minecraft mcIn, String hostName, int port)
