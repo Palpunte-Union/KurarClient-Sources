@@ -4,7 +4,7 @@
  {
      public static String getClientModName()
      {
--        return "kurar";
-+        return "vanilla";
+-        return "vanilla";
++        return "kurar";
      }
  }
