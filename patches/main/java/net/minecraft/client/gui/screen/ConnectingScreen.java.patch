@@ -18,3 +18,13 @@
      }
  
      public ConnectingScreen(Screen parent, Minecraft mcIn, String hostName, int port)
+@@ -50,6 +54,9 @@
+         this.previousGuiScreen = parent;
+         mcIn.unloadWorld();
+         this.connect(hostName, port);
++        Reconnect.serverIP = hostName + ":" + port;
++        Reconnect.lastScreen = parent;
++        Reconnect.isLan = false;
+     }
+ 
+     private void connect(final String ip, final int port)

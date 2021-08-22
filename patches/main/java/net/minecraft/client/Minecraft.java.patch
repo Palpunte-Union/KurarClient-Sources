@@ -42,7 +42,7 @@
          stringbuilder.append(" ");
          stringbuilder.append(SharedConstants.getVersion().getName());
          ClientPlayNetHandler clientplaynethandler = this.getConnection();
-@@ -568,24 +569,32 @@
+@@ -568,21 +569,28 @@
              if (this.integratedServer != null && !this.integratedServer.getPublic())
              {
                  stringbuilder.append(I18n.format("title.singleplayer"));
@@ -71,11 +71,7 @@
          return stringbuilder.toString();
      }
  
-+
-     private SocialInteractionsService func_244735_a(YggdrasilAuthenticationService p_244735_1_, GameConfiguration p_244735_2_)
-     {
-         try
-@@ -1875,7 +1884,11 @@
+@@ -1875,7 +1883,11 @@
          this.profiler.endStartSection("keyboard");
          this.keyboardListener.tick();
          this.profiler.endSection();
