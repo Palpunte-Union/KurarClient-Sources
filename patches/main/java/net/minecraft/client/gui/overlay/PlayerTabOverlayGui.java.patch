@@ -1,5 +1,14 @@
 --- a/main/java/net/minecraft/client/gui/overlay/PlayerTabOverlayGui.java
 +++ b/main/java/net/minecraft/client/gui/overlay/PlayerTabOverlayGui.java
+@@ -57,7 +57,7 @@
+ 
+     private ITextComponent func_238524_a_(NetworkPlayerInfo p_238524_1_, IFormattableTextComponent p_238524_2_)
+     {
+-        return p_238524_1_.getGameType() == GameType.SPECTATOR ? p_238524_2_.mergeStyle(TextFormatting.ITALIC) : p_238524_2_;
++        return p_238524_2_;
+     }
+ 
+     /**
 @@ -203,9 +203,9 @@
                      k2 += 9;
                  }
